@@ -3,10 +3,6 @@ name: 'Deploy Infra CI'
 on:
     push:
         branches: [ main ]
-    pull_request:
-        branches:  [ main ]
-        # paths:
-        #     - '.'
 
 env:
     FORCE_COLOR: 3
@@ -43,5 +39,5 @@ jobs:
             - name: Terraform init
               run: terraform init -backend-config="bucket=${{ env.TF_BUCKET }}" -backend-config="key=${{ env.TF_KEY }}"
 
-            # - name: Terraform apply
-            #   run: terraform apply -auto-approve
+            - name: Terraform apply
+              run: terraform apply -auto-approve
