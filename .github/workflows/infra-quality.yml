@@ -1,12 +1,8 @@
 name: 'Plan Infra CI'
 
 on:
-    push:
-        branches: [ main ]
     pull_request:
         branches:  [ main ]
-        paths:
-            - '.'
 
 env:
     FORCE_COLOR: 3

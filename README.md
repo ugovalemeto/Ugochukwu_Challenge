@@ -15,18 +15,14 @@ $ git push origin <feature_branch>
 ```
 
 ## To setup [Certbot](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-16-04)
-Run  the ```setupcertbot.sh``` file.
-```bash
-$ chmod u+x setupcertbot.sh
-$ ./setupcertbot.sh
-```
+
 
 You push to feature branch, so you create a **Pull request** to merge your successful code into the main branch.
 
 Code is successful if it runs through the pipeline (passes all tests) without throwing any errors.
 
 <img width="803" alt="image" src="https://user-images.githubusercontent.com/49791498/221283026-390e138c-9259-4b1e-9bb2-2351ed195edf.png">
-*web page served suing Nginx*
+*web page served using Nginx*
 
 <img width="1157" alt="image" src="https://user-images.githubusercontent.com/49791498/221288522-25824cfe-f78c-4910-99a4-b08d2c30cb80.png">
 *Cloud Watch*
