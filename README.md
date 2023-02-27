@@ -11,7 +11,7 @@ $ terraform apply
 ```bash
 $ git add .
 $ git commit -m "commit message"
-$ git push origin dev
+$ git push origin <feature_branch>
 ```
 
 ## To setup [Certbot](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-16-04)
@@ -21,7 +21,7 @@ $ chmod u+x setupcertbot.sh
 $ ./setupcertbot.sh
 ```
 
-You push to dev, so you create a **Pull request** to merge your successful code into the main branch.
+You push to feature branch, so you create a **Pull request** to merge your successful code into the main branch.
 
 Code is successful if it runs through the pipeline (passes all tests) without throwing any errors.
 
