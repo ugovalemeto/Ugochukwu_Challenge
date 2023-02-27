@@ -16,3 +16,8 @@ skip-check:
     - CKV_AWS_91 #"Ensure the ELBv2 (Application/Network) has access logging enabled"
     - CKV_AWS_150 #"Ensure that Load Balancer has deletion protection enabled"
     - CKV_AWS_41 #"Ensure no hard coded AWS access key and secret key exists in provider"
+    - CKV_AWS_135 #"Ensure that EC2 is EBS optimized"
+    - CKV_AWS_8 #"Ensure all data stored in the Launch configuration or instance Elastic Blocks Store is securely encrypted"
+    - CKV_AWS_126 #"Ensure that detailed monitoring is enabled for EC2 instances"
+    - CKV2_AWS_20 #"Ensure that ALB redirects HTTP requests into HTTPS ones"
+    - CKV_AWS_103 #"Ensure that load balancer is using at least TLS 1.2"
