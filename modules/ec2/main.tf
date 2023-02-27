@@ -34,13 +34,13 @@ resource "local_file" "private_key" {
 
 # EC2 instance
 resource "aws_instance" "infra_task_instance" {
-  ami           = data.aws_ami.ubuntu.id
-  instance_type = var.instance_type
-  subnet_id     = var.infra_task_subnet_id_1
+  ami                    = data.aws_ami.ubuntu.id
+  instance_type          = var.instance_type
+  subnet_id              = var.infra_task_subnet_id_1
   vpc_security_group_ids = [var.infra_task_sg_id]
   key_name               = var.key_name
-  user_data              = "${file("./userdata/script.sh")}"
-  availability_zone = "us-east-2a"
+  user_data              = file("./userdata/script.sh")
+  availability_zone      = "us-east-2a"
   tags = {
     Name = "infra-task-instance"
   }
@@ -65,15 +65,15 @@ resource "aws_lb_target_group" "infra_task_target_group" {
   target_type = "instance"
 
   health_check {
-    enabled = true
+    enabled             = true
     healthy_threshold   = 3
     unhealthy_threshold = 2
     timeout             = 3
     interval            = 30
-    matcher = 200
+    matcher             = 200
     path                = "/"
     port                = "traffic-port"
-    protocol = "HTTP"
+    protocol            = "HTTP"
   }
 }
 
