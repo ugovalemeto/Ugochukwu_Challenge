@@ -46,7 +46,7 @@ jobs:
               with:
                   framework: terraform
                   directory: .
-                  config_file: .checkov.yaml
+                  config_file: .checkov.yml
 
     deploy:
         needs: [check-terraform-format, infra-quality]
